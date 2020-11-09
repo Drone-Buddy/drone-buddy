@@ -1,0 +1,73 @@
+# 
+
+# DIFF all
+
+# version
+# Betaflight / MATEKF722SE (MF7S) 4.2.3 Nov  8 2020 / 11:30:35 (a87269ca3) MSP API: 1.43
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF722SE
+mcu_id 0026002c3338511439393832
+signature 
+
+# name: DroneBuddy
+
+# resources
+resource MOTOR 1 B00
+resource MOTOR 2 B01
+resource MOTOR 3 B04
+resource MOTOR 4 B05
+
+# beeper
+beeper -ON_USB
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 27 3 1800 2100 0 0
+aux 3 50 1 1800 2100 0 0
+aux 4 13 0 900 900 0 27
+
+# master
+set acc_calibration = 1,-117,206,1
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT600
+set motor_pwm_rate = 24000
+set align_board_yaw = 90
+set name = DroneBuddy
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
